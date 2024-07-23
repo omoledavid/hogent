@@ -974,11 +974,9 @@ function sendmail($email, $subject, $message){
         } else {
             throw new Exception('Please setup smtp');
         }
-        return dd('success');
     } catch (Exception $e) {
         DB::rollBack();
         $message = getErrorMessage($e, $e->getMessage());
-        return dd('error');
     }
 }
 function shortCodeReplacer($shortCode, $replace_with, $template_string)

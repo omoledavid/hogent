@@ -993,8 +993,8 @@ function sendEmail($user, $type = null, $shortCodes = [], $userType = 'user')
         return;
     }
 
-    $message = shortCodeReplacer("{{fullname}}", $user->name, $general->email_template);
-    $message = shortCodeReplacer("{{message}}", $emailTemplate->email_body, $message);
+    // $message = shortCodeReplacer("{{fullname}}", $user->name, $general->email_template);
+    // $message = shortCodeReplacer("{{message}}", $emailTemplate->email_body, $message);
 
     if (empty($message)) {
         $message = $emailTemplate->email_body;

@@ -95,7 +95,7 @@ class LoginController extends Controller
             } elseif (isset($user) && ($user->role == USER_ROLE_MAINTAINER)) {
                 return redirect()->route('maintainer.dashboard');
             } elseif (isset($user) && ($user->role == USER_ROLE_ADMIN)) {
-                sendEmail($user, 'WELCOME', ['user' => $user->name]);
+                // sendEmail($user, 'WELCOME', ['user' => $user->name]);
                 return redirect()->route('admin.dashboard');
             } else {
                 Auth::logout();

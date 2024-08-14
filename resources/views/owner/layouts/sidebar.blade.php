@@ -54,21 +54,21 @@
                     </ul>
                 </li>
 
-                <li>
-                    <a href="javascript: void(0);" class="has-arrow">
-                        <i class="ri-wallet-line"></i>
-                        <span>{{ __('Billing Center') }}</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li class="">
-                            <a href="{{ route('owner.invoice.index') }}" class="">{{ __('All Invoices') }}</a>
-                        </li>
-                        <li class="">
-                            <a href="{{ route('owner.invoice.recurring-setting.index') }}"
-                                class="">{{ __('Recurring Setting') }}</a>
-                        </li>
-                    </ul>
-                </li>
+{{--                <li>--}}
+{{--                    <a href="javascript: void(0);" class="has-arrow">--}}
+{{--                        <i class="ri-wallet-line"></i>--}}
+{{--                        <span>{{ __('Billing Center') }}</span>--}}
+{{--                    </a>--}}
+{{--                    <ul class="sub-menu" aria-expanded="false">--}}
+{{--                        <li class="">--}}
+{{--                            <a href="{{ route('owner.invoice.index') }}" class="">{{ __('All Invoices') }}</a>--}}
+{{--                        </li>--}}
+{{--                        <li class="">--}}
+{{--                            <a href="{{ route('owner.invoice.recurring-setting.index') }}"--}}
+{{--                                class="">{{ __('Recurring Setting') }}</a>--}}
+{{--                        </li>--}}
+{{--                    </ul>--}}
+{{--                </li>--}}
 
                 <li>
                     <a href="{{ route('owner.expense.index') }}">
@@ -84,12 +84,12 @@
                     </a>
                 </li>
 
-                <li>
-                    <a href="{{ route('owner.information.index') }}">
-                        <i class="ri-folder-info-line"></i>
-                        <span>{{ __('Information') }}</span>
-                    </a>
-                </li>
+{{--                <li>--}}
+{{--                    <a href="{{ route('owner.information.index') }}">--}}
+{{--                        <i class="ri-folder-info-line"></i>--}}
+{{--                        <span>{{ __('Information') }}</span>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
 
                 @if (isAddonInstalled('PROTYLISTING') > 0)
                     @if (getOption('LISTING_STATUS', 0) == ACTIVE)
@@ -113,18 +113,18 @@
                     @endif
                 @endif
 
-                <li>
-                    <a href="javascript: void(0);" class="has-arrow">
-                        <i class="ri-account-circle-line"></i>
-                        <span>{{ __('Maintains') }}</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('owner.maintainer.index') }}">{{ __('Maintainers') }}</a></li>
-                        <li><a
-                                href="{{ route('owner.maintenance-request.index') }}">{{ __('Maintenance Request') }}</a>
-                        </li>
-                    </ul>
-                </li>
+{{--                <li>--}}
+{{--                    <a href="javascript: void(0);" class="has-arrow">--}}
+{{--                        <i class="ri-account-circle-line"></i>--}}
+{{--                        <span>{{ __('Maintains') }}</span>--}}
+{{--                    </a>--}}
+{{--                    <ul class="sub-menu" aria-expanded="false">--}}
+{{--                        <li><a href="{{ route('owner.maintainer.index') }}">{{ __('Maintainers') }}</a></li>--}}
+{{--                        <li><a--}}
+{{--                                href="{{ route('owner.maintenance-request.index') }}">{{ __('Maintenance Request') }}</a>--}}
+{{--                        </li>--}}
+{{--                    </ul>--}}
+{{--                </li>--}}
 
                 @if (isAddonInstalled('PROTYSAAS') < 1 || ownerCurrentPackage(auth()->id())?->ticket_support == ACTIVE)
                     <li>
@@ -180,23 +180,23 @@
                     </a>
                 </li>
 
-                @if (isAddonInstalled('PROTYSMS') > 0)
-                    <li>
-                        <a href="javascript: void(0);" class="has-arrow">
-                            <i class="ri-mail-send-line"></i>
-                            <span>{{ __('Bulk Sms/Mail') }}</span>
-                        </a>
-                        <ul class="sub-menu" aria-expanded="false">
-                            <li>
-                                <a href="{{ route('sms-mail.sms') }}">{{ __('Sms') }}</a>
-                            </li>
-                            <li>
-                                <a href="{{ route('sms-mail.mail') }}">{{ __('Email') }}</a>
-                            </li>
+{{--                @if (isAddonInstalled('PROTYSMS') > 0)--}}
+{{--                    <li>--}}
+{{--                        <a href="javascript: void(0);" class="has-arrow">--}}
+{{--                            <i class="ri-mail-send-line"></i>--}}
+{{--                            <span>{{ __('Bulk Sms/Mail') }}</span>--}}
+{{--                        </a>--}}
+{{--                        <ul class="sub-menu" aria-expanded="false">--}}
+{{--                            <li>--}}
+{{--                                <a href="{{ route('sms-mail.sms') }}">{{ __('Sms') }}</a>--}}
+{{--                            </li>--}}
+{{--                            <li>--}}
+{{--                                <a href="{{ route('sms-mail.mail') }}">{{ __('Email') }}</a>--}}
+{{--                            </li>--}}
 
-                        </ul>
-                    </li>
-                @endif
+{{--                        </ul>--}}
+{{--                    </li>--}}
+{{--                @endif--}}
                 @if (isAddonInstalled('PROTYAGREEMENT') > 0)
                     <li>
                         <a href="{{ route('owner.agreement.index') }}">
@@ -226,14 +226,14 @@
                         <li><a href="{{ route('change-password') }}">{{ __('Change Password') }}</a></li>
                     </ul>
                 </li>
-                @if (isAddonInstalled('PROTYSAAS') > 1)
-                    <li>
-                        <a href="{{ route('owner.subscription.index') }}">
-                            <i class="ri-exchange-dollar-fill"></i>
-                            <span>{{ __('My Subscription') }}</span>
-                        </a>
-                    </li>
-                @endif
+{{--                @if (isAddonInstalled('PROTYSAAS') > 1)--}}
+{{--                    <li>--}}
+{{--                        <a href="{{ route('owner.subscription.index') }}">--}}
+{{--                            <i class="ri-exchange-dollar-fill"></i>--}}
+{{--                            <span>{{ __('My Subscription') }}</span>--}}
+{{--                        </a>--}}
+{{--                    </li>--}}
+{{--                @endif--}}
             </ul>
         </div>
         <!-- Sidebar -->
